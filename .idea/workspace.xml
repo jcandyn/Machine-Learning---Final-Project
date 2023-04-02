@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71b6c55-b21b-4212-bf2e-2dcfd0a3eecd" name="Changes" comment="" />
+    <list default="true" id="c71b6c55-b21b-4212-bf2e-2dcfd0a3eecd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Final-Report-TEAM-Number.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Final-Report-TEAM-Number.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URL_phishing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/URL_phishing.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/joscandynunez/Desktop/Machine-Learning---Final-Project",
+    "last_opened_file_path": "/Users/joscandynunez/Desktop/New Folder With Items/Machine-Learning---Final-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678850430866</updated>
       <workItem from="1678850435485" duration="3882000" />
+      <workItem from="1680441013790" duration="619000" />
     </task>
     <servers />
   </component>
