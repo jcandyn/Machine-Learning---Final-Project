@@ -85,13 +85,13 @@ This section summarizes existing solutions to the problem or similar problems. P
 This section elaborates your solution to the problem.
 
 \subsection{Description of Dataset}
-The features we are using from the dataset to train the model are the following: 'https_token', 'ratio_digits_url', 'nb_hyphens', 'nb_dots', 'nb_underscore', 'nb_slash'. Some of these features are discrete (0 or 1) and some are continuous values. Features that hold discrete values help describe whether something is present or not in the URL (i.e hyphens), while continuous values quantify a feature of the URL (i.e ratio of digits).
+The features we are using from the dataset to train the model are the following: https_token, ratio_digits_url, nb_hyphens, nb_dots, nb_underscore, nb_slash. Some of these features are discrete (0 or 1) and some are continuous values. Features that hold discrete values help describe whether something is present or not in the URL (i.e hyphens), while continuous values quantify a feature of the URL (i.e ratio of digits).
 
 \subsection{Machine Learning Algorithms}
 One machine learning we will be using is KNN-classifier. The values "phishing" and "legitimate" will be encoded to 0 and 1, respectively. 
 
 \subsection{Implementation Details}
-The date is split into a training size of 75%, and a dataset for testing of size 25% of the entire dataset. To optimize this algorithm, we are collecting the best value of k 'best_k', which is shown in the graph below:
+The date is split into a training size of 75 percent, and a dataset for testing of size 25 percent of the entire dataset. To optimize this algorithm, we are collecting the best value of k best_k, which is shown in the graph below:
 \includegraphics{best-k-value}
 
 \section{Comparison}  
