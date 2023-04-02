@@ -93,10 +93,15 @@ This machine learning model will place an emphasis on the special characters, pu
 \subsection{Machine Learning Algorithms}
 One machine learning we will be using is KNN-classifier. 
 
-Another machine learning algorithm we will be using is Logistic Regression. Logistic Regression is commonly used for classification tasks such as fraud detection. Logistic regression estimates the probability an instance belongs to a certain binary class. In this project, the logistic regression algorithm will estimate the probability a URL is phishing or legitimate. 
-If the probability that the URL is phishing exceeds 50%,the URL will be classified phishing. If this probability is below 50%, the URL will be classified as legitimate. 
-In logistic regression, the weighted sum of the input features and bias term is computed and processed through a logistic function to determine the probabilities for a binary classifcation. For the implementation of this algorithm, the following input features will be used to train the data: hyphens, dots, slashes, underscores, ratio of digits, status, and https token. The dataset will be split 75% for training and 25% for testing. Built-in libraries will be used from sklearn.linear_model to implement logistic regression. 
-Precision, f1-score, and recall will be calculated so that logistic regression can be compared to other algorithms for classifying phishing URLs.  
+Another machine learning algorithm we will be using is Logistic Regression. Logistic Regression is commonly used for classification tasks such as fraud detection. 
+Logistic regression estimates the probability an instance belongs to a certain binary class.
+ In this project, the logistic regression algorithm will estimate the probability a URL is phishing or legitimate.
+  If the probability that the URL is phishing exceeds 50%, the URL will be classified phishing. 
+  If this probability is below 50%, the URL will be classified as legitimate. 
+  In logistic regression, the weighted sum of the input features and bias term is computed and processed through a logistic function to determine the probabilities for a binary classifcation. 
+  For the implementation of this algorithm, the following input features will be used to train the data: hyphens, dots, slashes, underscores, ratio of digits, status, and https token. The dataset will be split 75% for training and 25% for testing. 
+  Built-in libraries will be used from sklearn.linear_model to implement logistic regression. Precision, f1-score, and recall will be calculated so that logistic regression can be compared to other algorithms for classifying spam URLs. 
+
 
 \subsection{Implementation Details}
 One model that will be used is KNN-classifier. To optimize this algorithm, The "best k" value is 18, which is how many neighbors are used in the sklearn.neighbors.KNeighborsClassifier python function. We are collecting the best value of k "best_k", by computing the cross_val_score accuracy for k in range (1,61) which is shown in the graph below:
