@@ -99,8 +99,10 @@ In logistic regression, the weighted sum of the input features and bias term is 
 Precision, f1-score, and recall will be calculated so that logistic regression can be compared to other algorithms for classifying phishing URLs.  
 
 \subsection{Implementation Details}
-The data is split into a training size of 75 percent, and a dataset for testing of size 25 percent of the entire dataset. To optimize this algorithm, we are collecting the best value of k "best_k", which is shown in the graph below:
+The data is split into a training size of 75 percent, and a dataset for testing of size 25 percent of the entire dataset. To optimize this algorithm, The "best k" value is 18, which is how many neighbors are used in the sklearn.neighbors.KNeighborsClassifier python function. We are collecting the best value of k "best_k", by computing the cross_val_score accuracy for k in range (1,61) which is shown in the graph below:
 \includegraphics{best-k-value.png}
+
+Training this model yielded Accuracy: 0.7925122463261022, Precision: 0.8117998506348021, and Recall: 0.761204481792717.
 
 \section{Comparison}  
 This section includes the following: 1) comparing the performance of different machine learning algorithms that you used, and 2) comparing the performance of your algorithms with existing solutions if any. Please provide insights to reason about why this algorithm is better/worse than another one.
