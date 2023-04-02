@@ -87,7 +87,7 @@ This section elaborates your solution to the problem.
 \subsection{Description of Dataset}
 The first step in building the phishing detection model website is to choose an appropriate dataset that will consist of both phishing and legitimate websites, which will be used for training a model for predicting phishing URLs. The chosen dataset can be found in Kaggle, and is called  “Web page Phishing Detection Dataset”, by Shashwat Tiwari. The dataset consists of 11430 rows of records containing URLs, and 87 columns that make up the features. This is a good dataset based on the fact that there are a large number of records and features to allow for a good breakdown of training and testing data. This will help us avoid either bias or variance while training the model. 
 
-This machine learning model will place an emphasis on the special characters, punctuation and https token of the URLs. In order to achieve this, all of the records will be used. The features that will be extracted to train the model are the following: "https_token", "ratio_digits_url", "nb_hyphens", "nb_dots", "nb_underscore", "nb_slash". Some of these features are discrete (0 or 1) and some are continuous values. Features that hold discrete values help describe whether something is present or not in the URL (i.e hyphens), while continuous values quantify a feature of the URL (i.e ratio of digits). The values "phishing" and "legitimate" will be encoded to 0 and 1, respectively. 
+This machine learning model will place an emphasis on the special characters, punctuation and https token of the URLs. In order to achieve this, all of the records will be used. The features that will be extracted to train the model are the following: "https_token", "ratio_digits_url", "nb_hyphens", "nb_dots", "nb_underscore", "nb_slash". Some of these features are discrete (0 or 1) and some are continuous values. Features that hold discrete values help describe whether something is present or not in the URL (i.e hyphens), while continuous values quantify a feature of the URL (i.e ratio of digits). The values "phishing" and "legitimate" will be encoded to 1 and 0, respectively. The data is split into a training size of 75 percent, and a dataset for testing of size 25 percent of the entire dataset.  
 \includegraphics{dataset.png}
 
 \subsection{Machine Learning Algorithms}
@@ -99,10 +99,24 @@ In logistic regression, the weighted sum of the input features and bias term is 
 Precision, f1-score, and recall will be calculated so that logistic regression can be compared to other algorithms for classifying phishing URLs.  
 
 \subsection{Implementation Details}
-The data is split into a training size of 75 percent, and a dataset for testing of size 25 percent of the entire dataset. To optimize this algorithm, The "best k" value is 18, which is how many neighbors are used in the sklearn.neighbors.KNeighborsClassifier python function. We are collecting the best value of k "best_k", by computing the cross_val_score accuracy for k in range (1,61) which is shown in the graph below:
+One model that will be used is KNN-classifier. To optimize this algorithm, The "best k" value is 18, which is how many neighbors are used in the sklearn.neighbors.KNeighborsClassifier python function. We are collecting the best value of k "best_k", by computing the cross_val_score accuracy for k in range (1,61) which is shown in the graph below:
 \includegraphics{best-k-value.png}
 
-Training this model yielded Accuracy: 0.7925122463261022, Precision: 0.8117998506348021, and Recall: 0.761204481792717.
+Training this model yields:
+Accuracy: 0.79
+Precision: 0.81
+Recall: 0.76
+
+URLs for manual test:
+When given, url is 'https://www.coursera.org/learn/python-machine-learning/lecture/MwsUM/k-nearest-neighbors-classification', the model accurately predicts it to be leigitimate.
+When given, url is 'https://app.simplenote.com/publish/XhRdVc', the model accurately predicts it to be phishing.
+When given, url is 'https://stackoverflow.com/questions/24878174/how-to-count-digits-letters-spaces-for-a-string-in-python', the model accurately predicts it to be leigimate.
+When given, url is 'https://www.mjwaldman.com/', the model accurately predicts it to be phishing.
+When given, url is 'https://www.simplilearn.com/tutorials/python-tutorial/python-if-else-statement', the model accurately predicts it to be leigitimate.
+When given, url is 'https://tubitv.com/category/peliculas_en_espanol', the model accurately predicts it to be leigitimate.
+
+The results from the manual tests are very satisfiying and outperform the expectations considering the numbers for accuracy, precision, and result. 
+
 
 \section{Comparison}  
 This section includes the following: 1) comparing the performance of different machine learning algorithms that you used, and 2) comparing the performance of your algorithms with existing solutions if any. Please provide insights to reason about why this algorithm is better/worse than another one.
