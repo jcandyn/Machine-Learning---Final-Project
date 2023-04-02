@@ -97,18 +97,10 @@ One machine learning we will be using is KNN-classifier.
 One model that will be used is KNN-classifier. To optimize this algorithm, The "best k" value is 18, which is how many neighbors are used in the sklearn.neighbors.KNeighborsClassifier python function. We are collecting the best value of k "best_k", by computing the cross_val_score accuracy for k in range (1,61) which is shown in the graph below:
 \includegraphics{best-k-value.png}
 
-Training this model yields:
-Accuracy: 0.79
-Precision: 0.81
-Recall: 0.76
+Training this model yields: accuracy: 0.79, precision: 0.81, and recall: 0.76.
 
 URLs for manual test:
-When given, url is 'https://www.coursera.org/learn/python-machine-learning/lecture/MwsUM/k-nearest-neighbors-classification', the model accurately predicts it to be leigitimate.
-When given, url is 'https://app.simplenote.com/publish/XhRdVc', the model accurately predicts it to be phishing.
-When given, url is 'https://stackoverflow.com/questions/24878174/how-to-count-digits-letters-spaces-for-a-string-in-python', the model accurately predicts it to be leigimate.
-When given, url is 'https://www.mjwaldman.com/', the model accurately predicts it to be phishing.
-When given, url is 'https://www.simplilearn.com/tutorials/python-tutorial/python-if-else-statement', the model accurately predicts it to be leigitimate.
-When given, url is 'https://tubitv.com/category/peliculas_en_espanol', the model accurately predicts it to be leigitimate.
+\includegraphics{knnManualTest.png}
 
 The results from the manual tests are very satisfiying and outperform the expectations considering the numbers for accuracy, precision, and result. 
 
